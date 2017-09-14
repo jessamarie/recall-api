@@ -1,7 +1,7 @@
 {
   "name": "recall-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "The API for Recall",
   "main": "server.js",
   "scripts": {
     "seed": "node config/db/seed.js",
@@ -25,6 +25,13 @@
   },
   "homepage": "https://github.com/jessamarie/recall-api#readme",
   "dependencies": {
-    "mongoose": "^4.11.11"
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.0"
   }
 }
