@@ -9,16 +9,18 @@ const env = process.env.NODE_ENV || 'development'
 
 // configure middleware
 
-// cors needed to allow front-end to access api
-app.use(cors({
-  origin: ['http://localhost:3000', '*'], // * (wildcard) permits any origin
-  optionsSuccessStatus: 200,
-  credentials: true // pass the Access-Control-Allow-Credentials CORS header
-}))
+module.exports = function expressConfig (app) {
+  // cors needed to allow front-end to access api
+  app.use(cors({
+    origin: ['http://localhost:4000', '*'], // * (wildcard) permits any origin
+    optionsSuccessStatus: 200,
+    credentials: true // pass the Access-Control-Allow-Credentials CORS header
+  }))
 
-// Don't log during tests
-if (env !== 'test') app.use(morgan('dev'))
+  // Don't log during tests
+  if (env !== 'test') app.use(morgan('dev'))
 
-// will be needed later when all of CRUD
-// is fully supported
-app.use(bodyParser.json())
+  // will be needed later when all of CRUD
+  // is fully supported
+  app.use(bodyParser.json())
+}
