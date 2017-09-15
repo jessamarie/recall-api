@@ -12,7 +12,7 @@ const env = process.env.NODE_ENV || 'development'
 module.exports = function expressConfig (app) {
   // cors needed to allow front-end to access api
   app.use(cors({
-    origin: ['http://localhost:4000', '*'], // * (wildcard) permits any origin
+    origin: ['http://localhost:3000', 'https://jessamarie.github.io/recall/'], // * (wildcard) permits any origin
     optionsSuccessStatus: 200,
     credentials: true // pass the Access-Control-Allow-Credentials CORS header
   }))
