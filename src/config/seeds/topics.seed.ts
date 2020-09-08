@@ -1,4 +1,10 @@
-[
+export interface Topic {
+  _id?: String;
+  name: string;
+  sentences: string[];
+}
+
+export const topics: Topic[] = [
   {
     "name": "Biology I",
     "sentences": [
@@ -135,4 +141,4 @@
       "Clauses with empty bodies are called facts."
     ]
   }
-]
+];
