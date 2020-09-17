@@ -1,6 +1,6 @@
-import config from './config/environment'
-import * as path from 'path';
-import * as fs from 'fs';
+import config from './config/environment';
+import path from 'path';
+import fs from 'fs';
 import { LoggerModes } from '@overnightjs/logger';
 
 // Set env variables

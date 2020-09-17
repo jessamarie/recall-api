@@ -1,6 +1,6 @@
 import { topics } from './topics.seed';
 import mongoose, { Mongoose } from 'mongoose';
-import config from '../environment'
+import config from '../environment';
 import Topic  from '../../models/topic.model';
 
 function mongoSetup(): Promise<void | Mongoose> {
@@ -24,9 +24,9 @@ export const seed = mongoSetup()
         process.exit();
     })
     .catch((err) => {
-        console.log(err)
+        console.log(err);
         process.exit();
-    })
+    });
 
 
 

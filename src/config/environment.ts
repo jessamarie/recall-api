@@ -11,7 +11,8 @@ const configs = [
     development,
     test,
     production
-]
+];
+
 const config = configs.find(config => config.env === env) || development;
 
 export default config;

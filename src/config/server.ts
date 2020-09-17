@@ -1,16 +1,16 @@
-import express from "express";
+import express from 'express';
 
 import cors from 'cors';
-import * as bodyParser from "body-parser";
-import * as dotenv from 'dotenv';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
 import helmet from 'helmet';
 
 import mongoose, { Mongoose } from 'mongoose';
 import config from './environment';
 import { Logger } from '@overnightjs/logger';
-import { Server } from "@overnightjs/core";
-import { CoreController } from "../controllers/core.controller";
-import { TopicController } from "../controllers/topic.controller";
+import { Server } from '@overnightjs/core';
+import { CoreController } from '../controllers/core.controller';
+import { TopicController } from '../controllers/topic.controller';
 
 class RecallServer extends Server {
 
@@ -31,7 +31,7 @@ class RecallServer extends Server {
             origin: ['http://localhost:3000', 'https://jessamarie.github.io/recall/', 'https://jessamarie.github.io'], // * (wildcard) permits any origin
             optionsSuccessStatus: 200,
             credentials: true // pass the Access-Control-Allow-Credentials CORS header
-        }))        
+        }));        
         this.app.use(express.json());
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: false }));
@@ -53,7 +53,7 @@ class RecallServer extends Server {
     private connectDB(): void {
         mongoose.connect(this.mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false })
             .then(
-                (conn: Mongoose) => { Logger.Imp(`Database ${conn.connections[0].name} is ready on ${conn.connections[0].host}`) },
+                (conn: Mongoose) => { Logger.Imp(`Database ${conn.connections[0].name} is ready on ${conn.connections[0].host}`); },
                 err => { Logger.Err(err); }
             );
     }
@@ -61,7 +61,7 @@ class RecallServer extends Server {
     public start(port: number): void {
         this.app.listen(port, () => {
             Logger.Imp(`Server listening on port: ${port}`);
-        })
+        });
     }
 
 }

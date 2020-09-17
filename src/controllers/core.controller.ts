@@ -6,7 +6,7 @@ import { Logger } from '@overnightjs/logger';
 @Controller('')
 export class CoreController {
 
-  /*
+    /*
   The most common codes to use for any HTTP request are:
     200 — OK
     404 — Not found
@@ -22,19 +22,19 @@ export class CoreController {
 */
 
   @Get('*')
-  private notFound(req: Request, res: Response) {
-    const error = { error: true, message: 'Check your URL please', url: req.originalUrl };
-    Logger.Info(`${error.message} ${error.url}`);
-    res.status(NOT_FOUND).json(error);
-  }
+    private notFound(req: Request, res: Response) {
+        const error = { error: true, message: 'Check your URL please', url: req.originalUrl };
+        Logger.Info(`${error.message} ${error.url}`);
+        res.status(NOT_FOUND).json(error);
+    }
 
-  // private fail(res: Response, error: Error | string) {
-  //   console.log(error);
-  //   res.status(500).json({
-  //     message: 'internal server error',
-  //     error: error.toString()
-  //   })
-  // }
+    // private fail(res: Response, error: Error | string) {
+    //   console.log(error);
+    //   res.status(500).json({
+    //     message: 'internal server error',
+    //     error: error.toString()
+    //   })
+    // }
 
 }
 
