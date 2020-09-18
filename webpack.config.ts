@@ -1,7 +1,5 @@
-import path from "path";
+import path from 'path';
 import * as webpack from 'webpack';
-// import * as nodeExternals from 'webpack-node-externals';
-
 const nodeExternals = require('webpack-node-externals');
 
 const config: webpack.Configuration = {
@@ -31,6 +29,6 @@ const config: webpack.Configuration = {
         path: path.join(__dirname, 'dist'),
         filename: 'index.js'
     }
-}
+};
 
 export default config;
