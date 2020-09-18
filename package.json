@@ -2,7 +2,7 @@
   "name": "recall-api",
   "version": "1.0.0",
   "description": "The API for Recall",
-  "main": "start.js",
+  "main": "index.js",
   "scripts": {
     "seed": "ts-node ./src/config/seeds/seed",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
