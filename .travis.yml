@@ -9,8 +9,6 @@ cache:
   - "./node_modules"
 install:
 - npm install
-before_script:
-- npm run seed
 script:
 - npm run lint
 deploy:
