@@ -9,5 +9,14 @@ cache:
     - ./node_modules
 install:
   - npm install
+before_script:
+  - npm run seed
 script:
   - npm run lint
+deploy:
+  provider: heroku:git
+  api_key: HEROKU_API_KEY
+  app: recall-api
+  on:
+    branch: master
+  edge: true
