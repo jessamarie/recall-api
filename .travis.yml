@@ -3,19 +3,20 @@ addons:
   chrome: stable
 language: node_js
 node_js:
-  - '14'
+- '14'
 cache:
   directories:
-    - ./node_modules
+  - "./node_modules"
 install:
-  - npm install
+- npm install
 before_script:
-  - npm run seed
+- npm run seed
 script:
-  - npm run lint
+- npm run lint
 deploy:
   provider: heroku:git
-  api_key: HEROKU_API_KEY
+  api_key:
+    secure: c6orVN2R/8qz54ED0seYOflFPAP22KqN/ynMo11w6lf0/16WXPqEgQTPPTKleI/sMFcQ1SsQ9xRm2UD1IovLna/a8fJ7bMwPDWtTGsFFc8JTIU5bMEImA7Cib4KaAp2/PRB6MwN/4AC2L883kjkZHfpZvDgYChewASGHlVMz32xnvz84UPLHXnsXN4tp+3uOxTasrqbZ1wI6xY0HldQF+u3lQZjMyjnVOGo2f7Dxh4ebLMm/MSFk5cK0cxZBW1+Lzmj4I+FAbtUtxzVAAFGzAOlx6WM/lPsvK/zdoXqt8emkzHUoUdJCaJDE7sT5i1sm40MstOucIxo35yE/0DK2ggpEWKXJsNrTNOuZ39T7ytgySL1ncg8GHjFhTteGDJ7rQET8EAnAFoy51CGaktF1xscjrc14lYo0QfCnR9k6/iPxFZkhvoiCSinpor8xIO1jg5ELmHByfnGDDlXUfA90WmpkLVh0GEL8yxj3dkfoLYXaTBM+yyjeeCG3wseuVA7+KF/tFPFh07/rh1I2ELdf1StcSiXk8DYWabuOsqiFSL6sVTfanEGCZhsC0TD4UlqawzhJ6+IPumg+bTAvBAsHpBjakobZUlQ9IBKGMm6B14m74CN06e8ZzrDjrK1G7VHCkwtp6sygIMbgHR3ObSED95mBj+/1s/T4uVLpdECd8Cg=
   app: recall-app-api
   on:
     branch: master
