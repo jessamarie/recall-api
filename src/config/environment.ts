@@ -5,7 +5,7 @@ import { Logger } from '@overnightjs/logger';
 
 const env = process.env.NODE_ENV;
 
-Logger.Imp(`Running in ${process.env.NODE_DEV}`);
+Logger.Imp(`Running in ${process.env.NODE_ENV}`);
 
 const configs = [
     development,
