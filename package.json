@@ -10,7 +10,7 @@
     "start:dev": "ts-node -r tsconfig-paths/register ./src/start.ts",
     "start:watch-dev": "tsnd -r tsconfig-paths/register ./src/start.ts",
     "build": "webpack --config webpack.prod.ts",
-    "start": "nodemon",
+    "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -54,7 +54,6 @@
     "@typescript-eslint/parser": "^4.1.1",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.9.0",
-    "nodemon": "^2.0.4",
     "ts-loader": "^8.0.3",
     "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
