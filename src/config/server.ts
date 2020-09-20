@@ -2,7 +2,6 @@ import express from 'express';
 
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
 import helmet from 'helmet';
 
 import mongoose, { Mongoose } from 'mongoose';
@@ -19,7 +18,6 @@ class RecallServer extends Server {
     constructor() {
         super(process.env.NODE_ENV === 'development'); // setting showLogs to true
 
-        dotenv.config();
         this.setupMiddleware();
         this.connectDB();
         this.setupControllers();
