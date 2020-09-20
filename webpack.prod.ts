@@ -3,6 +3,7 @@ import * as webpack from 'webpack';
 import common from './webpack.common';
 import path from 'path';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const nodeExternals = require('webpack-node-externals');
 
 const config: webpack.Configuration = merge(common, {
