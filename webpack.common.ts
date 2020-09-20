@@ -1,4 +1,3 @@
-import path from 'path';
 import * as webpack from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
@@ -7,7 +6,7 @@ const common: webpack.Configuration = {
     target: 'node',
     plugins: [
         new CleanWebpackPlugin()
-      ],
+    ],
     module: {
         rules: [
             {
