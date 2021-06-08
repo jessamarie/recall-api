@@ -6,7 +6,7 @@ import helmet from 'helmet';
 
 import mongoose, { Mongoose } from 'mongoose';
 import config from './environment';
-import { Logger } from '@overnightjs/logger';
+import Logger from 'jet-logger';
 import { Server } from '@overnightjs/core';
 import { CoreController } from '../controllers/core.controller';
 import { TopicController } from '../controllers/topic.controller';
