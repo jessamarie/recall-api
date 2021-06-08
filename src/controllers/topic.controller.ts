@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { TopicService } from '../services/topic.service';
 import { ITopic } from '../models/topic.model';
 import { Controller, Get } from '@overnightjs/core';
-import { Logger } from '@overnightjs/logger';
+import Logger from 'jet-logger';
 import { StatusCodes } from 'http-status-codes';
 import { Error } from 'mongoose';
 
