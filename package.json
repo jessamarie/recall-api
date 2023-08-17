@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "The API for Recall",
   "main": "./dist/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "seed": "ts-node ./src/config/seeds/seed",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
