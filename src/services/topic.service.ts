@@ -1,21 +1,16 @@
 import Topic, { ITopic } from '../models/topic.model';
-import { DocumentQuery } from 'mongoose';
 
 export class TopicService {
+  public async getAll(): Promise<ITopic[] | null> {
+    const topics = Topic.find({});
 
-    public getAll(): DocumentQuery<ITopic[] | null, ITopic> {
-        return Topic.find({}, (err: Error, topics: ITopic[]) => {
-            if (err) throw err;
-            return topics;
-        });
-    }
+    return topics;
+  }
 
-    public getTopic(id: string): DocumentQuery<ITopic | null, ITopic> {
-        return Topic.findOne({ _id: id }, (err: Error, topic: ITopic) => {
-            if (err) throw err;
-            if (!topic) throw new Error(`Topic with _id ${id} not found`);
+  public async getTopic(id: string): Promise<ITopic | null> {
+    const topic: ITopic | null = await Topic.findOne({ _id: id });
 
-            return topic;
-        });
-    }
+    if (!topic) throw new Error(`Topic with _id ${id} not found`);
+    return topic;
+  }
 }
