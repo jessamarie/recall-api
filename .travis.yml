@@ -3,18 +3,18 @@ addons:
   chrome: stable
 language: node_js
 node_js:
-- '14'
+  - '16'
 cache:
   directories:
-  - "./node_modules"
+    - './node_modules'
 install:
-- npm install
+  - npm install
 script:
-- npm run lint
+  - npm run lint
 deploy:
   provider: heroku:git
   api_key:
-    secure: CqQPWfKfv13A5YdwMT1eRkZ4jAqwQ0F44ZURjn+5tzDnZu4f1m9yfj8vhYjGmOVMeEe/py/MUGak4R6HG3FVGnT1Ofh+2BU8YbgMXBOssaKZf0BYl3Eoo01l3H6vlAGAh69m417brjCWY0SsC3M4mOBqbAGAMCxi/++rx8lVPLHTChFmqTl6lwh4YYq5uohhSYlQEvNYqkARP6dXH5ovjJA9eXdALvDGfbuL6lMYlZx4vKEerEJI2XAncrvy3ValRkFV/jePicp7iU//vU6lMm2XZUbET7kmkPlaRK/DP6XDpRoU8WIu1Ud4Oli38juUUYlV+eEzuISbbP88f0EXatZ7NmeLdZlHTGc7NP250J2o0ohDR6uB0WXMwZujrE3mJiGgXHqpAusPkCOkxPV3egyjDf/O0O7P1tOXA1jWVwmGFS/wHYwT8TsfvZ+o+QVob+KlyJjwvGazgEcjcg8SDrSDrGWP3IhIeDkp3oGlkrILP9ALcFLA7QPB20dVKhUywaKnEdbhWxPyiG9i+oBh0DRpzbBF5LtX86DELUmfi8CYyY7fFi0YRLetdkm0IKlJsaHICJm5imqyBisRLrF0NQp9YxMCuYvvXB2pN+MfjeYPoNxDdv0vQkk2HnF1WXBEYK8w4nWHj5pDFkShfyB3W+sok/T38tq9eD/DlPF+vso=
+    secure: aZG5A8gQokOnbta1q1f7jGMIclenqeuDQSzW+R6Ze47HW3BRJZKiVmJET5gIqP3fnZmfEK7GyxLd916KAv/ESDwj6DD1u5c3t8pzzszHEOLRWWkSXmifMrCtPgwmx3vhZBgEi0KNFRvS+VkyEA+h3estwNAF3Ce5V3s/lLutLwa2DGpah3ym7VegkuyZVNABzIJSBkvtPkt+L8d+pBas53oI9tBleVvF7cN/0lYHimHO97ViNFzEmteWhW8XIpnhtObDpEfduDC5LXG6dW09IrmPGy9TMKZ3SiXYpHLgCwfdZue0Xfe4Q3kOlo63We17Yre/HAZvlssRHBg1pEEH7KgK6OpGtq2b5en1rvRZYKb0hYg9xU0Gb1q3tBSLYtRBrGU5qxIFK4/Z2B83kyFFL/q5amLSkhkuBNZ+txa0eS/x/eilXamF3J559cFw0i3GKTX2wW1N5SWB6ny3fE2tb+FMf4Bi8sdAtpxbogocQ4m2HyvxbKdeP2ufspg/F4NtDEnnsoTlRa5ZMMWUCDvoep89z0tSzEWW8Z/P2NGPP/d03cx7L1HUuWMWaqZC+7JFvAm7aRDZnRhlvggTgKkeZgBB4Km/3K9j0oR2SJN/icUHVYVZRzySHwGk9wLK6TE5I7EV2Q1j+h7YF07rMZpada9bDn1EgzY8durUBTznaGg=
   app: recall-app-api
   on:
     branch: master
